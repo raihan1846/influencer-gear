@@ -1,9 +1,244 @@
-
 .open-sans-font {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* common css  */
+.btn-primary {
+    padding: 10px 24px;
+    background-color: #E02C6D;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+
+/* navbar styles start  */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    margin: 0 auto;
+    gap: 494px;
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+ul li {
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #3A3A3A;
+    margin-right: 34px;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #3A3A3A;
+}
+
+/* banner styles start  */
+.banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 1440px;
+    height: 600px;
+    gap: 190px;
+}
+
+.banner-img {
+    margin-top: 50px;
+    background-image: url('../images/Circle\ design.svg');
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    margin-top: 140px;
+    margin-left: 50px;
+}
+
+.banner-title {
+    font-weight: bold;
+    font-size: 3.3rem;
+}
+
+.banner-description {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Sponsor advertise part start  */
+.sponsor-advertise {
+    width: 1110px;
+    margin: 0 auto;
+    margin-top: 69px;
+}
+
+.company-logo {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* card style start  */
+.popular-collection{
+    max-width: 1047px;
+    margin: 100px auto;
+}
+.collection-title{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #3A3A3A;
+    text-align: center;
+}
+.collection-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.card-body{
+    padding: 10px 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.card-title{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0px;
+}
+.card-price{
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0px;
+}
+.card-rate{
+    color: yellow;
+    margin: 0;
+}
+.star-rate{
+    color: black;
+}
+.card-description{
+    width: 196px;
+    font-weight: bold;
+    color: rgba(120, 120, 133, 1);
+    font-size: 0.8rem;
+    margin: 0;
+}
+.see-more{
+    text-align: right;
+    color: #E02C6D;
+    margin-top: 50px;
+}
+
+/* featured product part style  */
+.featured-product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px;
+    width: 1110px;
+    margin: 100px auto;
+}
+.feature-product-title{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.feature-product-description{
+    font-weight: bold;
+    font-size: 1rem;
+    color: #6C6C6C;
+}
+/* footer style  */
+.footer{
+    width: 100%;
+    height: 239px;
+    background-color: rgb(2, 2, 2);
+}
+.footer-content{
+    width: 262px;
+    margin: 50px auto;
+}
+.footer-title{
+    color: white;
+    margin: 0;
+    padding-top: 20px;
+}
+.footer-description{
+    color: white;
+}
+/* nav and banner responsive  */
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+
+    }
+
+    .nav-links,
+    .banner,
+    .collection-card,
+    .featured-product{
+        grid-template-columns: 1fr;
+    }
+.collection-card{
+    justify-items: center;
+}
+    .company-logo {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+
+    .banner {
+        width: 100%;
+        gap: 0px;
+    }
+
+    .banner-content {
+        margin-top: 0px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .banner-img {
+        order: -1;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    .banner-img img {
+        width: 250px;
+        max-width: 100%;
+    }
+    .banner-title {
+        font-size: 1.8rem;
+    }
+    .sponsor-advertise, .popular-collection {
+        width: 100%;
+    }
+    .card-description{
+        width: 100%;
+    }
+    .featured-product{
+        width: 100%;
+        text-align: center;
+        gap: 0;
+    }
+    .feature-product-content{
+        order: -1;
+        margin-bottom: 20px;
+    }
+   
 }
